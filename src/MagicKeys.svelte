@@ -6,8 +6,12 @@
 </script>
 
 <main>
-	<SingleNote on:hit={() => points += 1} on:miss={() => points -= 2}/>
-	<span>{points}</span>
+	{#if navigator.requestMIDIAccess}
+		<SingleNote on:hit={() => points += 1} on:miss={() => points -= 2}/>
+		<span>{points}</span>
+	{:else}
+		<h1>Your browser does not support MIDI or you're using HTTP instead of HTTPS.</h1>
+	{/if}
 </main>
 
 <style>
