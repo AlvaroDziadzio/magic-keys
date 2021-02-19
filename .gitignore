@@ -1,0 +1,13 @@
+/node_modules/
+/public/build/
+/.vscode/
+
+# SSL
+**/**.crt
+**/**.csr
+**/**.csr.cnf
+**/**.ext
+**/**.key
+**/**.pem
+
+.DS_Store
